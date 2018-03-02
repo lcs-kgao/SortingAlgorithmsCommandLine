@@ -23,13 +23,20 @@ print("Press any key to generate the unsorted list.", terminator: "")
 // Wait for a key to be pressed
 let input = readLine()
 
-// Make an empty array / list
+//Creating an empty array
 var numbers : [Int] = []
 
-// Populate the array
-for _ in 1...10 {
-    numbers.append( random(between: 1, and: 50) )
-}
+
+//Add 20 random numbers to unsorted
+//for _ in 1...20 {
+//    unsorted.append( random(between: 1, and: 50) )
+//}
+numbers.append(10)
+numbers.append(8)
+numbers.append(6)
+numbers.append(4)
+numbers.append(2)
+
 
 // Show the user the contents of the array
 print("-----")
@@ -41,6 +48,21 @@ print("-----")
 
 // ----------- Write code to sort the array here -----------
 print("Now sorting the array...")
+
+
+
+//
+for i in 0...3
+{
+    //Comparing the numbers that are next to each other in the array (e.x. if item in index 0 is greater than item in index 1)
+     if numbers[i] > numbers[i + 1]  {
+        
+        //Setting the first index to the temporary value, and move the second index number to the position of first index value.
+        let tempValue = numbers[i]
+        numbers[i] = numbers[i+1]
+        numbers[i+1] = tempValue
+    }
+}
 
 // ----------- Final part of the program, show the sorted list -----------
 print("-----")
