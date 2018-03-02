@@ -50,19 +50,22 @@ print("-----")
 print("Now sorting the array...")
 
 
-
 //
-for i in 0...3
-{
-    //Comparing the numbers that are next to each other in the array (e.x. if item in index 0 is greater than item in index 1)
-     if numbers[i] > numbers[i + 1]  {
-        
-        //Setting the first index to the temporary value, and move the second index number to the position of first index value.
-        let tempValue = numbers[i]
-        numbers[i] = numbers[i+1]
-        numbers[i+1] = tempValue
+for j in stride(from: 3, through: 0, by: -1) {
+    for i in 0...j
+    {
+        //Comparing the numbers that are next to each other in the array (e.x. if item in index 0 is greater than item in index 1)
+        if numbers[i] > numbers[i + 1]  {
+            
+            //Setting the first index to the temporary value, and move the second index number to the position of first index value.
+            let tempValue = numbers[i]
+            numbers[i] = numbers[i+1]
+            numbers[i+1] = tempValue
+        }
     }
 }
+
+
 
 // ----------- Final part of the program, show the sorted list -----------
 print("-----")
