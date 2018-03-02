@@ -28,14 +28,10 @@ var numbers : [Int] = []
 
 
 //Add 20 random numbers to unsorted
-//for _ in 1...20 {
-//    unsorted.append( random(between: 1, and: 50) )
-//}
-numbers.append(10)
-numbers.append(8)
-numbers.append(6)
-numbers.append(4)
-numbers.append(2)
+for _ in 1...20 {
+    numbers.append( random(between: 1, and: 50) )
+}
+
 
 
 // Show the user the contents of the array
@@ -51,7 +47,7 @@ print("Now sorting the array...")
 
 
 //
-for j in stride(from: 3, through: 0, by: -1) {
+for j in stride(from: numbers.count - 2, through: 0, by: -1) {
     for i in 0...j
     {
         //Comparing the numbers that are next to each other in the array (e.x. if item in index 0 is greater than item in index 1)
