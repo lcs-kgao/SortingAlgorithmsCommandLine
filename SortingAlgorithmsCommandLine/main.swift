@@ -46,7 +46,7 @@ print("-----")
 print("Now sorting the array...")
 
 
-//
+
 for j in stride(from: numbers.count - 2, through: 0, by: -1) {
     for i in 0...j
     {
